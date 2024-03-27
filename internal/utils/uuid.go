@@ -6,11 +6,11 @@ import (
 	"github.com/google/uuid"
 )
 
-var uuidChan = make(chan []byte, 1024)
+var UuidChan = make(chan []byte, 1024)
 
-func uuidFactory() {
+func UuidFactory() {
 	for {
-		uuidChan <- cuuid()
+		UuidChan <- cuuid()
 	}
 }
 

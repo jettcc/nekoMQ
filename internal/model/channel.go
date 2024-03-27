@@ -1,11 +1,11 @@
 package model
 
-type RequestChannel struct {
-	Var        interface{}
+type ChannelMsgRequest struct {
+	Data       interface{}
 	ReturnChan chan interface{}
 }
 
-type ResponseChannel struct {
-	Err      error
-	Variable interface{}
+type ChannelMsgResponse struct {
+	Error error
+	Data  interface{}
 }

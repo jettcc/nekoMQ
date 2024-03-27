@@ -4,6 +4,7 @@ import (
 	"flag"
 	"sesm/global"
 	"sesm/internal/load"
+	"sesm/internal/utils"
 )
 
 func main() {
@@ -12,6 +13,6 @@ func main() {
 
 	load.Init(*logFilePath)
 	defer load.Sync()
-
 	global.Sugar.Info("Service start")
+	go utils.UuidFactory()
 }
