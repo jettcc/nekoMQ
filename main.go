@@ -7,6 +7,8 @@ import (
 	"sesm/internal/utils"
 )
 
+var logg = global.Sugar
+
 func main() {
 	var logFilePath = flag.String("l", "log/service.log", "log file path")
 	flag.Parse()

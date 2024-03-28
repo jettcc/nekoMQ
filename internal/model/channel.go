@@ -1,11 +1,11 @@
 package model
 
 type ChannelMsgRequest struct {
-	Data       interface{}
-	ReturnChan chan interface{}
+	Data       any
+	ReturnChan chan any
 }
 
 type ChannelMsgResponse struct {
 	Error error
-	Data  interface{}
+	Data  any
 }
